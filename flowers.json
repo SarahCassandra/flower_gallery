@@ -1,0 +1,131 @@
+[
+
+{
+    "name": "Bougainvillea",
+    "scientificName": "Bougainvillea glabra",
+    "origin": "South America, widely cultivated in the Philippines",
+    "interestingFact": "Known for vibrant walls and hedges; bracts, not petals, provide the vivid color.",
+    "pictures": "bougainvillea.jpg"
+},
+{
+    "name": "Jasmine(Sampaguita)",
+    "scientificName": "Jasminum sambac",
+    "origin": "Native to Southeast Asia, Philippines’ national flower",
+    "interestingFact": "Used in garlands, perfumes, and religious offerings; symbolizes purity and simplicity.",
+    "pictures": "jasmine.jpg"
+},
+{
+    "name": "Plumeria (Kalachuchi)",
+    "scientificName": "Plumeria rubra",
+    "origin": "Central America; tropical plant widely grown in the Philippines",
+    "interestingFact": "Commonly used in leis and decorations; blooms in warm, sunny weather.",
+    "pictures": "plumeria.jpg"
+},
+{
+    "name": "Hibiscus (Gumamela)",
+    "scientificName": "Hibiscus rosa-sinensis",
+    "origin": "Asia, popular in tropical climates",
+    "interestingFact": "Symbol of beauty and courage; leaves and flowers used in herbal teas.",
+    "pictures": "hibiscus.jpg"
+},
+{
+    "name": "Sunflower",
+    "scientificName": "Helianthus annuus",
+    "origin": "North America, widely cultivated in the Philippines",
+    "interestingFact": "Follows the sun’s movement (heliotropism); seeds are edible.",
+    "pictures": "sunflower.jpg"
+},
+{
+    "name": "Orchids",
+    "scientificName": "Family Orchidaceae",
+    "origin": "Worldwide; many native to the Philippines",
+    "interestingFact": "Waling-waling (Vanda sanderiana) is called 'Queen of Philippine flowers.'",
+    "pictures": "orchids.jpg"
+},
+{
+    "name": "Red Scarlet Lily",
+    "scientificName": "Lilium spp.",
+    "origin": "Native to Asia, widely cultivated",
+    "interestingFact": "Represents passion and pride; often used in floral arrangements.",
+    "pictures": "lilies.jpg"
+},
+{
+    "name": "Tulip",
+    "scientificName": "Tulipa spp.",
+    "origin": "Central Asia, widely cultivated worldwide",
+    "interestingFact": "Symbol of spring and renewal; blooms in cool seasons.",
+    "pictures": "tulips.jpg"
+},
+{
+    "name": "Peony",
+    "scientificName": "Paeonia spp.",
+    "origin": "China and Europe",
+    "interestingFact": "Symbolizes romance, prosperity, and honor; highly fragrant.",
+    "pictures": "peonies.jpg"
+},
+{
+    "name": "Rose",
+    "scientificName": "Rosa spp.",
+    "origin": "Native to Asia and Europe",
+    "interestingFact": "Symbol of love and beauty; petals used in perfumes and teas.",
+    "pictures": "roses.jpg"
+},
+{
+    "name": "Cherry Blossom (Sakura)",
+    "scientificName": "Prunus serrulata",
+    "origin": "Japan, widely cultivated worldwide",
+    "interestingFact": "Short-lived blooms symbolize the fleeting nature of life.",
+    "pictures": "cherryBlossom.jpg"
+},
+{
+    "name": "Lavender",
+    "scientificName": "Lavandula spp.",
+    "origin": "Mediterranean",
+    "interestingFact": "Used in perfumes, essential oils, and aromatherapy.",
+    "pictures": "lavender.jpg"
+},
+{
+    "name": "Hydrangea",
+    "scientificName": "Hydrangea macrophylla",
+    "origin": "Japan and Asia",
+    "interestingFact": "Flower color depends on soil pH (acidic soil = blue, alkaline = pink).",
+    "pictures": "hydrangea.jpg"
+},
+{
+    "name": "Baby’s Breath (Gypsophila)",
+    "scientificName": "Gypsophila paniculata",
+    "origin": "Europe and Asia",
+    "interestingFact": "Popular as a filler in bouquets; symbolizes everlasting love.",
+    "pictures": "babysBreath.jpg"
+},
+{
+    "name": "Wisteria",
+    "scientificName": "Wisteria sinensis",
+    "origin": "China, Japan",
+    "interestingFact": "Often grows on pergolas or arches; symbolizes longevity and beauty.",
+    "pictures": "wisteria.jpg"
+},
+{
+    "name": "Ixora (Santan)",
+    "scientificName": "Ixora coccinea",
+    "origin": "Southern Asia; common in the Philippines",
+    "interestingFact": "Popular for hedges; symbolizes devotion and passion.",
+    "pictures": "ixora.jpg"
+},
+{
+    "name": "Chrysanthemum",
+    "scientificName": "Chrysanthemum spp.",
+    "origin": "Asia, especially China and Japan",
+    "interestingFact": "Symbolizes happiness and longevity in Asian cultures; blooms in cool seasons.",
+    "pictures": "chrysanthemum.jpg"
+},
+{
+    "name": "Daisy",
+    "scientificName": "Bellis perennis",
+    "origin": "Europe, widely naturalized",
+    "interestingFact": "Symbol of innocence and purity; easy to grow and commonly found in gardens.",
+    "pictures": "daisy.jpg"
+}
+
+
+]
