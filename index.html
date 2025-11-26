@@ -37,34 +37,126 @@
     .card img {
         transition: transform 0.4s ease, filter 0.4s ease;
     }
+
+    .img-fit {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+        color: #000000 !important;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #ffffff !important;
+        text-shadow: 0 0 15px #000000, 0 0 25px #ffffff;
+        transform: scale(1.02);
+    }
+
+    .navbar {
+        transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    .navbar:hover {
+        background-color: rgba(255, 255, 255, 0.6) !important;
+        backdrop-filter: blur(8px);
+    }
+    [id] {
+        scroll-margin-top: 100px !important;
+    }
+
 </style>
 
 <body>
-    <div class="container-fluid fixed-top shadow-lg bg-white">
+    <nav id="nav" class="navbar nav navbar-expand-md bg-white fixed-top z-3 m-0 py-2 px-3 shadow-sm mb-5">
+        <div class="container-fluid">
+            <img src="flower.png" alt="Flower" class="img-fluid" style="max-height:30px; margin-right:10px;">
+            <a class="navbar-brand fw-bold" href="#">Flower Gallery</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end text-dark" id="navMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item pe-3"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item pe-3"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item pe-3"><a class="nav-link" href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5 shadow-lg overflow-hidden g-0" id="home">
         <div class="row">
-            <div class="col text-center p-3">
-                <div class="h4">
-                    Flower Gallery
-                </div>
+            <div class="col">
+                <img src="cover.jpg" alt="Flower" class="img-fluid img-fit d-block mx-auto w-100">
             </div>
         </div>
     </div>
-
-    <div class="container mt-5 p-5 mb-5">
-        <div class="row mb-5 gy-4 rounded-5" id="galleryRow">
-
-        </div>
     </div>
-    <script>
-        fetch("flowers.json")
-            .then(response => response.json())
-            .then(flowers => {
-                var galleryRow = document.getElementById("galleryRow");
-                var galleryHTML = '';
+
+    <div id="about" class="container my-5" style="text-align: justify;">
+        <div class="row">
+            <div class="col">
+                <h2 class="mb-3">
+                    ABOUT FLOWER GALLERY
+                    </h3>
+                    <p>
+                        Flower Gallery is a carefully crafted online space dedicated to showcasing the beauty,
+                        diversity, and stories behind the world’s most captivating blooms.
+                        What began as a simple personal collection has grown into a visual archive where nature lovers,
+                        students, gardeners, and curious explorers can learn
+                        and appreciate flowers in a simple, accessible way. </p>
+                    <p>
+                        Our gallery features a wide range of flowers — from common tropical blooms found in local
+                        gardens to unique ornamental species admired
+                        around the globe. Each flower entry includes its name, scientific classification, origin, and
+                        interesting facts that highlight what makes
+                        each bloom special. Whether you’re exploring for fun, learning for school, or searching for your
+                        next gardening inspiration,
+                        Flower Gallery aims to be your friendly companion.
+                    </p>
+                    <p>
+                        This website is made with passion, creativity, and the desire to explore nature’s beauty.
+                        Every picture, detail, and feature has been thoughtfully designed to create a calming and
+                        inspiring browsing experience.
+                        Thank you for visiting and taking the time to discover the world of flowers with us.
+                        May this gallery brighten your day and inspire your love for nature.
+                    </p>
+            </div>
+        </div>
+        <div class="container p-5 mb-5">
+            <div class="h2 mb-3" id="gallery">
+                GALLERY
+            </div>
+            <div class="row mb-5 gy-4 rounded-5" id="galleryRow">
+
+            </div>
+        </div>
 
 
-                for (var i = 0; i < flowers.length; i++) {
-                    galleryHTML += `
+ <footer class="container-fluid z-3 m-2 p-2 g-0 bg-transparent text-dark">
+        <h6 class="mb-3 p-3 text-center">© 2025 Sarah Cassandra Macalilong |
+            © Freepik | © Pixabay | © Unsplash| All Rights Reserved</h6>
+    </footer>
+
+
+        <script>
+            fetch("flowers.json")
+                .then(response => response.json())
+                .then(flowers => {
+                    var galleryRow = document.getElementById("galleryRow");
+                    var galleryHTML = '';
+
+
+                    for (var i = 0; i < flowers.length; i++) {
+                        galleryHTML += `
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card h-100 shadow-sm rounded-5">
                 <img src="${flowers[i].pictures}" class="card-img-top flower-img rounded-top-5" data-index="${i}">
@@ -76,12 +168,12 @@
             </div>
         </div>
         `;
-                }
+                    }
 
-                galleryRow.innerHTML = galleryHTML;
+                    galleryRow.innerHTML = galleryHTML;
 
 
-                document.body.insertAdjacentHTML('beforeend', `
+                    document.body.insertAdjacentHTML('beforeend', `
     <div class="modal fade" id="flowerModal" tabindex="-1" aria-labelledby="flowerModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
@@ -91,7 +183,7 @@
           </div>
           <div class="modal-body text-center">
             <img src="" id="modalImage" class="img-fluid mb-3">
-            <p><i>Scientific Name: <span id="modalScientificName"></i></p>
+            <p><i>Scientific Name: <span id="modalScientificName"></span></i></p>
             <p><strong>Origin:</strong> <span id="modalOrigin"></span></p>
             <p><strong>Interesting Fact:</strong> <span id="modalFact"></span></p>
           </div>
@@ -101,33 +193,33 @@
     `);
 
 
-                var modal = new bootstrap.Modal(document.getElementById('flowerModal'));
-                var modalImage = document.getElementById('modalImage');
-                var modalTitle = document.getElementById('flowerModalLabel');
-                var modalScientificName = document.getElementById('modalScientificName');
-                var modalOrigin = document.getElementById('modalOrigin');
-                var modalFact = document.getElementById('modalFact');
+                    var modal = new bootstrap.Modal(document.getElementById('flowerModal'));
+                    var modalImage = document.getElementById('modalImage');
+                    var modalTitle = document.getElementById('flowerModalLabel');
+                    var modalScientificName = document.getElementById('modalScientificName');
+                    var modalOrigin = document.getElementById('modalOrigin');
+                    var modalFact = document.getElementById('modalFact');
 
-                var images = document.getElementsByClassName('flower-img');
-                for (var j = 0; j < images.length; j++) {
-                    images[j].addEventListener('click', function () {
-                        var index = this.getAttribute('data-index');
-                        modalTitle.textContent = flowers[index].name;
-                        modalImage.src = flowers[index].pictures;
-                        modalScientificName.textContent = flowers[index].scientificName;
-                        modalOrigin.textContent = flowers[index].origin;
-                        modalFact.textContent = flowers[index].interestingFact;
+                    var images = document.getElementsByClassName('flower-img');
+                    for (var j = 0; j < images.length; j++) {
+                        images[j].addEventListener('click', function () {
+                            var index = this.getAttribute('data-index');
+                            modalTitle.textContent = flowers[index].name;
+                            modalImage.src = flowers[index].pictures;
+                            modalScientificName.textContent = flowers[index].scientificName;
+                            modalOrigin.textContent = flowers[index].origin;
+                            modalFact.textContent = flowers[index].interestingFact;
 
-                        modal.show();
-                    });
-                }
-            });
+                            modal.show();
+                        });
+                    }
+                });
 
-    </script>
+        </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
